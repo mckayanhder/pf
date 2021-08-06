@@ -1,0 +1,103 @@
+
+
+//colors
+    $txt: rgba(251, 249, 233, 0.719);
+    $bg: rgba(49, 49, 49, 0.95);
+    $blk: rgb(209, 204, 204);
+    $gld: rgba(184, 166, 4, 0.719);
+    $border: solid 2px $gld;
+    
+
+    @media (prefers-color-scheme: dark) {
+      $bg: rgb(37, 37, 37);
+      
+      $blk: rgb(193, 193, 193);
+      $border: solid 2px $txt;
+    
+    }
+
+
+@mixin card {
+    padding: .5rem 1rem;
+    border: solid 2px $txt;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexDir($dir) {
+    display: flex;
+    justify-content: $dir;   
+}
+
+
+@mixin ebr {
+      position: relative;
+      vertical-align: middle;
+      &::before,
+      &::after {
+        box-sizing: inherit;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    
+    @mixin borderAni {
+    
+        transition: color 1.5s;
+    
+      &::before,
+      &::after {
+        // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+        border: 2px solid transparent;
+        width: 0;
+        height: 0;
+      }
+    
+      // This covers the top & right borders (expands right, then down)
+      &::before {
+        top: 0;
+        left: 0;
+      }
+    
+      // And this the bottom & left borders (expands left, then up)
+      &::after {
+        bottom: 0;
+        right: 0;
+      }
+      
+      &:hover {
+        color: $gld;
+      }
+    
+      // Hover styles
+      &:hover::before,
+      &:hover::after {
+        width: 100%;
+        height: 100%;
+      }
+    
+      &:hover::before {
+        border-top-color: $gld; // Make borders visible
+        border-right-color: $gld;
+        transition:
+          width 1s ease-out, // Width expands first
+          height 0.25s ease-out 0.25s; // And then height
+      }
+    
+      &:hover::after {
+        border-bottom-color: $gld; // Make borders visible
+        border-left-color: $gld;
+        transition:
+          border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
+          width 1s ease-out 0.5s, // And then exanding width
+          height 0.25s ease-out 0.75s; // And finally height
+      }
+    }
+    
+    

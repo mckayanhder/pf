@@ -1,0 +1,194 @@
+@import "var";
+@import "logo3d";
+@import "marquee";
+@import "float";
+@import "form";
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Julius Sans One', sans-serif;
+    cursor: crosshair;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+
+body{
+    background-color: $bg;
+    // background-image: url(../media/plant.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100vw;
+    margin: 1rem;
+    align-items: center;
+    color: $txt;
+    scrollbar-width: 1px;
+    @include ebr;
+    @include borderAni;
+       *{
+        border-radius: 10px;
+       }
+        a {
+            @include ebr;
+            @include borderAni;
+            text-decoration: none;
+            color: $txt;
+            background: $bg;
+            padding: .5rem;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        ul {
+         @include ebr;
+        @include borderAni;
+        }
+}
+
+
+
+#navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include flexCenter;
+    margin: 1rem;
+    height: 6vh;
+    width: 91vw;
+    justify-content: space-around;
+    font-size: 2rem;
+    font-weight: bold;
+    @include ebr;
+    @include borderAni;
+ 
+    a {
+      
+        text-decoration: none;
+        color: $txt;
+        margin: 2rem;
+        &:hover {
+            transform: scale(1.1);
+        }
+        
+    }
+    div {
+        z-index: 4;
+    }
+}
+
+
+
+.hero_content {
+    height: 100vh;
+    width: 45vw;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: visible;
+    .hero_card{
+        padding: .5rem;
+        background-color: $bg;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        z-index: 6;
+        *{
+            z-index: 6;
+            margin: .5rem 1rem 0.5rem 1rem;
+        }
+        height: 60%;
+        width: 50vw;
+        position: relative;
+        left: 35vw;
+        top: 20vh;   
+        @include ebr;
+        @include borderAni;
+       a {
+        color: $blk;
+        &:hover{
+            color: $txt;
+            @include ebr;
+            @include borderAni;
+        }
+       }
+       p {
+           display: flex;
+           flex-direction: row;
+           align-items: center;
+           justify-content: space-evenly;
+           @include ebr;
+           @include borderAni;
+       }
+        li {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        list-style: none;
+        color: $blk;
+        @include ebr;
+        @include borderAni;
+        // border: $border;
+        }
+   
+    }
+}
+
+#links {
+    @include ebr;
+    @include borderAni;
+}
+
+.contact-page {
+    background: $bg;
+    height: 100vh;
+    width: 100vw;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    img {
+        margin-top: 10vh;
+        max-width: 30vw;
+    }
+    form {
+        margin-top: 5vh;
+        max-width: 40vw;
+      
+    }
+}
+
+#contact {
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.contact{
+    background: $bg;
+    position: relative;
+    @include flexCenter;
+    @include ebr;
+    @include borderAni;
+}
+
+.about-projects {
+    margin-top: 5rem;
+    font-size: 8vh;
+    color: $txt;
+    background: $bg;
+    h3{
+    padding-left: 5vw;
+    width: 50vw;
+    
+    }
+}
+

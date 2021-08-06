@@ -1,0 +1,38 @@
+@import "var";
+
+#mylogo {
+    position: fixed; 
+    display: flex;
+    top: 35vh;
+    left: 5vw;
+    width: 25vw;
+    height: 100vh;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    overflow: visible;
+    opacity: .9;
+    border: none;
+    .bg {
+      position: inherit;
+      width: 25vw;
+      height: 50vh;
+      background-image: url(../media/polymoose.png);
+      background-size: fill;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+   
+  }
+
+  .myicon{
+    position: relative;
+    display: flex;
+    width: 20vw;
+    top: -270px;
+    left: 50px;
+    z-index: 1;
+      border: none;
+      overflow: visible;
+     
+  }
