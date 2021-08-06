@@ -52,8 +52,13 @@ textarea {
 
 
 
-input[type=submit], input[type=reset] {
+    button {
     list-style: none;
     color: $txt;
+    z-index: 6;
+    background: $bg;
+    width: 30vw;
+    height: 3rem;
+    border: $border;
    
 }
