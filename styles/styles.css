@@ -367,6 +367,7 @@ input {
   border: solid 2px rgba(184, 166, 4, 0.719);
   width: 30vw;
   height: 3rem;
+  color: rgba(251, 249, 233, 0.719);
 }
 
 textarea {
@@ -374,6 +375,7 @@ textarea {
   border: solid 2px rgba(184, 166, 4, 0.719);
   width: 30vw;
   height: 10vw;
+  color: rgba(251, 249, 233, 0.719);
 }
 
 input[type=submit], input[type=reset] {
