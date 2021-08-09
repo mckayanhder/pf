@@ -24,7 +24,8 @@ a:hover {
 body{
     background-color: $bg;
     background-image: url(../media/plant.jpg);
-    background-size: contain;
+    background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     align-items: center;
     color: $txt;

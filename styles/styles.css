@@ -394,7 +394,8 @@ a:hover {
 body {
   background-color: rgba(34, 34, 34, 0.766);
   background-image: url(../media/plant.jpg);
-  background-size: contain;
+  background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   -webkit-box-align: center;
       -ms-flex-align: center;
