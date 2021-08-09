@@ -1136,7 +1136,7 @@ body ul:hover::after {
             flex-direction: column;
     overflow: scroll;
     background-image: url(../media/bwplant.jpg);
-    background-size: cover;
+    background-size: fill;
     background-attachment: fixed;
     -webkit-box-pack: justify !important;
         -ms-flex-pack: justify !important;
